@@ -8,19 +8,19 @@ function getInvolved() {
     if (email === '' || firstname === '') {
         alert('Please fill in all fields');
     } else {
-        const userDocRef = db.collection('members_get_in_touch').doc(firstname);
-        userDocRef.set({
+        console.log(email, firstname);
+        db.collection('members_get_in_touch').add({
             email: email,
-            firstname: firstname
+            firstname: firstname,
+            date: firebase.firestore.FieldValue.serverTimestamp()
         })
-        .then(() => {
-            alert('Thank you for your interest. We will get back to you soon.');
-            document.getElementById('email').value = '';
-            document.getElementById('firstname').value = '';
-        })
-        .catch((error) => {
-            console.error(error);
-            alert(error)
-        })
+            .then(() => {
+                alert('Thank you for your interest. We will get back to you soon.');
+                document.getElementById('email').value = '';
+                document.getElementById('firstname').value = '';
+            })
+            .catch((error) => {
+                console.error(error);
+            })
     }
 }

@@ -1,66 +1,142 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The White House</title>
+    <title>The Louw Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-        .title-font {
-            font-family: 'Merriweather', serif;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/members.css">
+    </link>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold title-font text-gray-900">
-                The White House
-            </h1>
+
+<body class="bg-white text-gray-700">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xs">
+                Live Now: <span style="font-weight: bold;">President Louw</span> delivers a remarkable speech at WRCA
+            </div>
+            <div class="uppercase text-xs font-semibold">
+                <button>
+                    Menu
+                    <i class="fas fa-bars ml-2"></i>
+                </button>
+            </div>
         </div>
     </header>
-    <main>
-        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <div class="px-4 py-6 sm:px-0">
-                <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-                    <div class="flex justify-between items-center bg-white p-4 shadow rounded-lg">
-                        <div class="flex-1">
-                            <h2 class="text-lg font-semibold title-font text-gray-900">THE ADMINISTRATION</h2>
-                            <div class="mt-4 flex space-x-4">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image of President Biden" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image of Vice President Harris" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing The Cabinet" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing Offices" class="rounded-full">
-                            </div>
-                            <div class="mt-2 flex justify-between max-w-xs">
-                                <span class="text-sm text-gray-600">President Biden</span>
-                                <span class="text-sm text-gray-600">Vice President Harris</span>
-                                <span class="text-sm text-gray-600">The Cabinet</span>
-                                <span class="text-sm text-gray-600">Offices</span>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg font-semibold title-font text-gray-900">ABOUT THE WHITE HOUSE</h2>
-                            <div class="mt-4 flex space-x-4">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing Past Presidents" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing First Families" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing The Grounds" class="rounded-full">
-                                <img src="https://placehold.co/100x100" alt="Placeholder image representing Our Government" class="rounded-full">
-                            </div>
-                            <div class="mt-2 flex justify-between max-w-xs">
-                                <span class="text-sm text-gray-600">Past Presidents</span>
-                                <span class="text-sm text-gray-600">First Families</span>
-                                <span class="text-sm text-gray-600">The Grounds</span>
-                                <span class="text-sm text-gray-600">Our Government</span>
-                            </div>
+
+    <nav class="bg-white border-b border-gray-200 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/index.html" class="text-xl title-font font-bold">The Louw Institute</a>
+            <div class="relative">
+                <input type="search" placeholder="Search" class="pl-10 pr-4 py-2 border border-gray-300 rounded-full">
+                <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto my-12 px-4">
+        <h1 class="text-5xl title-font font-bold text-center mb-12">The Louw-Elguezabal Administration</h1>
+        <p class="text-center mb-12">Thousands of people work in the West Wing, the East Wing, the Cabinet, and the
+            Executive Office of the President. Learn more about the people who carry out the priorities of the
+            Louw-Elguezabal Administration.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div class="text-center">
+                <img src="/assets/img/members/dr_matthew_dickson.jpg" alt="Placeholder image of President Joe Biden"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">President, <span style="font-style: italic;">Dr. Matthew Dickson</span></h2>
+            </div>
+            <div class="text-center">
+                <img src="/assets/img/members/prof_e.jpg" alt="Placeholder image of Vice President Kamala Harris"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">Vice President, <span style="font-style: italic;">Prof. E</span></h2>
+            </div>
+            <div class="text-center">
+                <img src="/assets/img/members/dr_mcdaniel.JPG" alt="Placeholder image of First Lady Dr. Jill Biden"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">Campaign Manager, <span style="font-style: italic;">Dr. Mitchell Mcdaniel</span></h2>
+            </div>
+            <div class="text-center">
+                <img src="/assets/img/members/dr_hu.jpg" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">Media Director, <span style="font-style: italic;">Dr. Hu</span></h2>
+            </div>
+            <div class="text-center">
+                <img src="/assets/img/members/dr_fraser.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">Budget Director, <span style="font-style: italic;">Dr. Fraser</span></h2>
+            </div>
+            <div class="text-center">
+                <img src="/assets/img/members/dr_miranda.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                    class="rounded-full mx-auto mb-4" width="200" height="200">
+                <h2 class="font-semibold">Social Media Director, <span style="font-style: italic;">Dr. Miranda</span></h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" style="padding-top: 20px;">
+            <div class="text-center">
+                <img src="/assets/img/members/cabinet.jpeg" alt="Placeholder image of The Cabinet" class="mx-auto mb-4">
+                <h2 class="font-semibold">The Cabinet</h2>
+            </div>
+            <div class="text-center">
+                <img src="https://placehold.co/200x200" alt="Placeholder image of Executive Office of the President"
+                    class="mx-auto mb-4">
+                <h2 class="font-semibold">Executive Office of the President</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100">
+        <div class="container mx-auto py-12 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="https://placehold.co/200x100" alt="Placeholder image of The White House logo"
+                        class="mb-4">
+                </div>
+                <div class="col-span-2">
+                    <h2 class="title-font font-bold text-lg mb-4">Stay Connected</h2>
+                    <form class="flex flex-wrap gap-4">
+                        <input type="email" placeholder="Email Address*"
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded">
+                        <input type="text" placeholder="ZIP Code"
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded">
+                        <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 pt-8 text-sm">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <a href="#" class="text-blue-800">Home</a>
+                        <a href="#" class="text-blue-800">The Administration</a>
+                        <a href="#" class="text-blue-800">Executive Offices</a>
+                        <a href="#" class="text-blue-800">Priorities</a>
+                        <a href="#" class="text-blue-800">The Record</a>
+                        <a href="#" class="text-blue-800">Briefing Room</a>
+                        <a href="#" class="text-blue-800">The White House</a>
+                        <a href="#" class="text-blue-800">Disclosures</a>
+                        <a href="#" class="text-blue-800">Get Involved</a>
+                        <a href="#" class="text-blue-800">Español</a>
+                    </div>
+                    <div class="text-gray-500 mb-4">
+                        <a href="#" class="text-blue-800">Contact Us</a> |
+                        <a href="#" class="text-blue-800">Privacy Policy</a> |
+                        <a href="#" class="text-blue-800">Copyright Policy</a> |
+                        <a href="#" class="text-blue-800">Accessibility Statement</a>
+                    </div>
+                    <div class="flex justify-center">
+                        <div>
+                            <p>The Louw Institute</p>
+                            <p>2265 152 St</p>
+                            <p>Surrey, BC V4A 4P1</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </footer>
 </body>
+
 </html>

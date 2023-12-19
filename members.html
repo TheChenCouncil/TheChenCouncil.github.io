@@ -8,14 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/members.css">
-    </link>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="assets/js/firebase_init.js"></script>
 </head>
 
 <body class="bg-white text-gray-700">
     <header class="bg-blue-800 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-xs">
-                Live Now: <span style="font-weight: bold;">President Louw</span> delivers a remarkable speech at WRCA
+                <span style="font-weight: bold;">Live Now:</span> <span style="font-weight: bold; font-style: italic;">President Louw</span> delivers a remarkable speech at WRCA
             </div>
             <div class="uppercase text-xs font-semibold">
                 <button>
@@ -40,46 +45,60 @@
         <h1 class="text-5xl title-font font-bold text-center mb-12">The Louw-Elguezabal Administration</h1>
         <p class="text-center mb-12">Thousands of people work in the West Wing, the East Wing, the Cabinet, and the
             Executive Office of the President. Learn more about the people who carry out the priorities of the
-            Louw-Elguezabal Administration.</p>
+            Louw-Elguezabal Administration at <span style="font-style: italic;">the Louw Council</span>.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div class="text-center">
-                <img src="/assets/img/members/dr_matthew_dickson.jpg" alt="Placeholder image of President Joe Biden"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">President, <span style="font-style: italic;">Dr. Matthew Dickson</span></h2>
-            </div>
-            <div class="text-center">
-                <img src="/assets/img/members/prof_e.jpg" alt="Placeholder image of Vice President Kamala Harris"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">Vice President, <span style="font-style: italic;">Prof. E</span></h2>
-            </div>
-            <div class="text-center">
-                <img src="/assets/img/members/dr_mcdaniel.JPG" alt="Placeholder image of First Lady Dr. Jill Biden"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">Campaign Manager, <span style="font-style: italic;">Dr. Mitchell Mcdaniel</span></h2>
-            </div>
-            <div class="text-center">
-                <img src="/assets/img/members/dr_hu.jpg" alt="Placeholder image of Second Gentleman Douglas Emhoff"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">Media Director, <span style="font-style: italic;">Dr. Hu</span></h2>
-            </div>
-            <div class="text-center">
-                <img src="/assets/img/members/dr_fraser.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">Budget Director, <span style="font-style: italic;">Dr. Fraser</span></h2>
-            </div>
-            <div class="text-center">
-                <img src="/assets/img/members/dr_miranda.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
-                    class="rounded-full mx-auto mb-4" width="200" height="200">
-                <h2 class="font-semibold">Social Media Director, <span style="font-style: italic;">Dr. Miranda</span></h2>
-            </div>
+            <button onclick="window.location.href = '/members/dr_matthew_dickson.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/dr_matthew_dickson.jpg" alt="Placeholder image of President Joe Biden"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">President, <span style="font-style: italic;">Dr. Dickson</span></h2>
+                </div>
+            </button>
+            <button onclick="window.location.href = '/members/prof_e.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/prof_e.jpg" alt="Placeholder image of Vice President Kamala Harris"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">Vice President, <span style="font-style: italic;">Prof. E</span></h2>
+                </div>
+            </button>
+            <button onclick="window.location.href = '/members/dr_mcdaniel.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/dr_mcdaniel.JPG" alt="Placeholder image of First Lady Dr. Jill Biden"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">Campaign Manager, <span style="font-style: italic;">Dr. Mitchell Mcdaniel</span></h2>
+                </div>
+            </button>
+            <button onclick="window.location.href = '/members/dr_hu.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/dr_hu.jpg" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">Media Director, <span style="font-style: italic;">Dr. Hu</span></h2>
+                </div>
+            </button>
+            <button onclick="window.location.href = '/members/dr_fraser.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/dr_fraser.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">Budget Director, <span style="font-style: italic;">Dr. Fraser</span></h2>
+                </div>
+            </button>
+            <button onclick="window.location.href = '/members/dr_miranda.html'">
+                <div class="text-center">
+                    <img src="/assets/img/members/dr_miranda.JPG" alt="Placeholder image of Second Gentleman Douglas Emhoff"
+                        class="rounded-full mx-auto mb-4" width="200" height="200">
+                    <h2 class="font-semibold">Social Media Director, <span style="font-style: italic;">Dr. Miranda</span></h2>
+                </div>
+            </button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" style="padding-top: 20px;">
-            <div class="text-center">
-                <img src="/assets/img/members/cabinet.jpeg" alt="Placeholder image of The Cabinet" class="mx-auto mb-4">
-                <h2 class="font-semibold">The Cabinet</h2>
-            </div>
+            <button onclick="window.location.href = 'https://wrca.ca'">
+                <div class="text-center">
+                    <img src="/assets/img/members/cabinet.jpeg" alt="Placeholder image of The Cabinet" class="mx-auto mb-4">
+                    <h2 class="font-semibold">The Cabinet</h2>
+                </div>
+            </button>
             <div class="text-center">
                 <img src="https://placehold.co/200x200" alt="Placeholder image of Executive Office of the President"
                     class="mx-auto mb-4">
@@ -91,40 +110,28 @@
     <footer class="bg-gray-100">
         <div class="container mx-auto py-12 px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <img src="https://placehold.co/200x100" alt="Placeholder image of The White House logo"
-                        class="mb-4">
+                <div style="display: flex; align-items: center; height: 100%;">
+                    <h3 href="/index.html" class="text-xl title-font font-bold" style="font-size: 40px;">The Louw Institute</h3>
                 </div>
                 <div class="col-span-2">
                     <h2 class="title-font font-bold text-lg mb-4">Stay Connected</h2>
                     <form class="flex flex-wrap gap-4">
-                        <input type="email" placeholder="Email Address*"
-                            class="flex-1 px-4 py-2 border border-gray-300 rounded">
-                        <input type="text" placeholder="ZIP Code"
-                            class="flex-1 px-4 py-2 border border-gray-300 rounded">
-                        <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded">Sign Up</button>
+                        <input type="email" placeholder="Email Address" class="flex-1 px-4 py-2 border border-gray-300 rounded" id="email">
+                        <input type="text" placeholder="First name" class="flex-1 px-4 py-2 border border-gray-300 rounded" id="firstname">
+                        <button class="bg-blue-800 text-white px-6 py-2 rounded" onclick="getInvolved()">Sign Up</button>
                     </form>
                 </div>
             </div>
             <div class="border-t border-gray-300 pt-8 text-sm">
                 <div class="flex flex-wrap justify-between items-center">
                     <div class="flex flex-wrap gap-4 mb-4">
-                        <a href="#" class="text-blue-800">Home</a>
-                        <a href="#" class="text-blue-800">The Administration</a>
+                        <a href="/index.html" class="text-blue-800">Home</a>
+                        <a href="/members.html" class="text-blue-800">The Administration</a>
                         <a href="#" class="text-blue-800">Executive Offices</a>
                         <a href="#" class="text-blue-800">Priorities</a>
-                        <a href="#" class="text-blue-800">The Record</a>
-                        <a href="#" class="text-blue-800">Briefing Room</a>
-                        <a href="#" class="text-blue-800">The White House</a>
                         <a href="#" class="text-blue-800">Disclosures</a>
                         <a href="#" class="text-blue-800">Get Involved</a>
-                        <a href="#" class="text-blue-800">Español</a>
-                    </div>
-                    <div class="text-gray-500 mb-4">
-                        <a href="#" class="text-blue-800">Contact Us</a> |
-                        <a href="#" class="text-blue-800">Privacy Policy</a> |
-                        <a href="#" class="text-blue-800">Copyright Policy</a> |
-                        <a href="#" class="text-blue-800">Accessibility Statement</a>
+                        <a href="#" class="text-blue-800">Contact Us</a>
                     </div>
                     <div class="flex justify-center">
                         <div>
@@ -138,5 +145,5 @@
         </div>
     </footer>
 </body>
-
+<script src="/assets/js/members.js"></script>
 </html>

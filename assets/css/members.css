@@ -5,3 +5,12 @@ body {
 .title-font {
     font-family: 'Merriweather', serif;
 }
+
+.member-btn {
+    transition: transform 0.3s ease;
+}
+
+.member-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

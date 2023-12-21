@@ -1,7 +1,7 @@
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-function getInvolved() {
+function stayConnected() {
     const email = document.getElementById('email').value;
     const firstname = document.getElementById('firstname').value;
 

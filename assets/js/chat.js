@@ -7,6 +7,7 @@ const chatContainer = document.getElementById('chat-container');
 const chatInput = document.getElementById('chat-input');
 const sendButton = document.getElementById('send-button');
 var OPENAI_API_KEY = '';
+let isScrolledToBottom = true;
 
 const userInfo = {
     browserInfo: navigator.userAgent,
@@ -18,9 +19,9 @@ const userInfo = {
 };
 
 db.collection("environment_key").doc("openai").get()
-.then((data) => {
-    OPENAI_API_KEY = data.data().key;
-})
+    .then((data) => {
+        OPENAI_API_KEY = data.data().key;
+    })
 
 const SYSTEM_MESSAGE = `
 System message:
@@ -34,6 +35,8 @@ Here are the members of the campaign:
 - Dr. Hu, Media Director (This website is created by him)
 - Dr. Fraser, Budget Manager
 - Dr. Miranda, Social Media Manager
+
+URL of the campaign's website home page: http://campaign.iamjerryhu.info/
 
 Here are basic information about the user:
 - Browser: ${userInfo.browserInfo}
@@ -75,42 +78,58 @@ document.getElementById('send-button').addEventListener('click', async (event) =
     const chatInput = document.getElementById('chat-input');
     const message = chatInput.value;
 
-    const userMessage = document.createElement('div');
-    userMessage.innerHTML = `
-    <div class="mb-4 flex items-end justify-end">
-        <p class="text-xs text-gray-500 mr-2">${new Date().toLocaleTimeString()}</p>
+    if (message.trim() === '') {
+        alert('Please enter a message.')
+    } else {
+        document.getElementById('send-button').disabled = true;
+        document.getElementById('send-button-icon').style.fill = '#F3F4F6'
+
+        const userMessage = document.createElement('div');
+        userMessage.innerHTML = `
+    <div class="mb-4 flex flex-col items-end justify-end">
         <div class="bg-blue-100 rounded px-4 py-2 max-w-xs">
             <p class="text-sm">${message}</p>
         </div>
+        <p class="text-xs text-gray-500 mt-2">${new Date().toLocaleTimeString()}</p>
     </div>
     `
-    chatInput.value = '';
-    chatContainer.appendChild(userMessage);
-    const response = await askChatGPT(message);
-
-    const aiResponse = document.createElement('div');
-    aiResponse.classList.add('mb-4', 'flex', 'items-end');
-
-    const messageDiv = document.createElement('div');
-    messageDiv.classList.add('bg-gray-200', 'rounded', 'px-4', 'py-2', 'max-w-xs');
-
-    const timeP = document.createElement('p');
-    timeP.classList.add('text-xs', 'text-gray-500', 'ml-2');
-    timeP.textContent = new Date().toLocaleTimeString();
-
-    aiResponse.appendChild(messageDiv);
-    aiResponse.appendChild(timeP);
-    chatContainer.appendChild(aiResponse);
-
-    let i = 0;
-    const typingEffect = setInterval(() => {
-        if (i < response.length) {
-            messageDiv.textContent += response.charAt(i);
-            i++;
-        } else {
-            clearInterval(typingEffect);
+        chatInput.value = '';
+        chatContainer.appendChild(userMessage);
+        if (isScrolledToBottom) {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
         }
-    }, 10);
+
+        const response = await askChatGPT(message);
+
+        const aiResponse = document.createElement('div');
+        aiResponse.classList.add('mb-4', 'flex', 'flex-col', 'items-start');
+
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('bg-gray-200', 'rounded', 'px-4', 'py-2', 'max-w-xs');
+
+        const timeP = document.createElement('p');
+        timeP.classList.add('text-xs', 'text-gray-500', 'mt-2');
+        timeP.textContent = new Date().toLocaleTimeString();
+
+        aiResponse.appendChild(messageDiv);
+        aiResponse.appendChild(timeP);
+        chatContainer.appendChild(aiResponse);
+
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            if (i < response.length) {
+                messageDiv.textContent += response.charAt(i);
+                if (isScrolledToBottom) {
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+                i++;
+            } else {
+                clearInterval(typingEffect);
+                document.getElementById('send-button').disabled = false;
+                document.getElementById('send-button-icon').fill = '#0C57D0';
+            }
+        }, 10);
+    }
 });
 
 document.getElementById('chat-input').addEventListener('keydown', function (event) {
@@ -118,4 +137,9 @@ document.getElementById('chat-input').addEventListener('keydown', function (even
         event.preventDefault();
         document.getElementById('send-button').click();
     }
+});
+
+chatContainer.addEventListener('scroll', () => {
+    isScrolledToBottom = chatContainer.scrollTop + chatContainer.clientHeight === chatContainer.scrollHeight;
+
 });

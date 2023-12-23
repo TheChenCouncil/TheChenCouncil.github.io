@@ -29,20 +29,27 @@ This is a chat for a web development project. You are talking to an anonymous us
 
 This is the web chat for The Louw Institute, which is a student-started campaign based in Surrey, BC, Canada. The campaign is People's party, and the five main ideologies are immigration, housing, health care, freedom of expression, and public finance.
 Here are the members of the campaign:
-- Dr. Dickson, President
-- Prof. E, Vice President
-- Dr. Mcdaniel, Campaign Manager
-- Dr. Hu, Media Director (This website is created by him)
-- Dr. Fraser, Budget Manager
-- Dr. Miranda, Social Media Manager
+- Dr. Dickson, President (instagram: @dylan_louw)
+- Prof. E, Vice President (instagram: @weluveli111)
+- Dr. Mcdaniel, Campaign Manager (instagram: _thegoodbiker)
+- Dr. Hu, Media Director (Creator of this website and the LouwGPT, which is you, instagram: @i.am.jerry.hu)
+- Dr. Fraser, Budget Manager (instagram: @ernieafraser)
+- Dr. Miranda, Social Media Manager (instagram: @nathaniel_miranda_baseball31)
 
 URL of the campaign's website home page: http://campaign.iamjerryhu.info/
+URL of the campaign's main pages:
+- http://campaign.iamjerryhu.info/members.html (The Administration Members)
+- http://campaign.iamjerryhu.info/chat.html (This chat page with you)
+- http://campaign.iamjerryhu.info/record.html (The record of the campaign, past articles, etc.)
+- http://campaign.iamjerryhu.info/vision.html (The vision of the campaign)
+- http://campaign.iamjerryhu.info/members/dr_fraser.html (The page of Dr. Fraser)
+- http://campaign.iamjerryhu.info/members/dr_hu.html (The page of Dr. Hu)
+- http://campaign.iamjerryhu.info/members/dr_matthew_dickson.html (The page of Dr. Dickson, the president)
+- http://campaign.iamjerryhu.info/members/dr_mcdaniel.html (The page of Dr. Mcdaniel)
+- http://campaign.iamjerryhu.info/members/dr_miranda.html (The page of Dr. Miranda)
+- http://campaign.iamjerryhu.info/members/prof_e.html (The page of Prof. E)
 
-Here are basic information about the user:
-- Browser: ${userInfo.browserInfo}
-- Operating system: ${userInfo.operatingSystem}
-- Language: ${userInfo.language}
-- Timezone: ${userInfo.timezone}`;
+You will refuse to answer any question that is not related to the Louw Institute. You will apologize, and tell them professionally that you don't know the information and that you can't answer.`;
 
 
 async function askChatGPT(userMessage) {
@@ -127,13 +134,32 @@ document.getElementById('send-button').addEventListener('click', async (event) =
                 clearInterval(typingEffect);
                 document.getElementById('send-button').disabled = false;
                 document.getElementById('send-button-icon').fill = '#0C57D0';
+
+                const urlRegex = /(https?:\/\/[^\s]+)/g;
+                const urlMatch = messageDiv.textContent.match(urlRegex);
+                if (urlMatch) {
+                    messageDiv.innerHTML = messageDiv.textContent.replace(urlRegex, (url) => {
+                        return `<a style="color: blue" href="${url}" target="_blank">${url}</a>`;
+                    });
+
+                    const openUrlButton = document.createElement('button');
+                    openUrlButton.textContent = 'Open URL';
+                    openUrlButton.classList.add('btn', 'btn-primary', 'btn-sm', 'mt-2');
+                    openUrlButton.style.setProperty('--bs-btn-padding-y', '.25rem');
+                    openUrlButton.style.setProperty('--bs-btn-padding-x', '.5rem');
+                    openUrlButton.style.setProperty('--bs-btn-font-size', '.75rem');
+                    openUrlButton.addEventListener('click', () => {
+                        window.open(urlMatch[0], '_blank');
+                    });
+                    aiResponse.insertBefore(openUrlButton, timeP);
+                }
             }
-        }, 10);
+        }, 10); // Problem 1 and 2 fixed: The closing brackets were misplaced. They should be here.
     }
 });
 
 document.getElementById('chat-input').addEventListener('keydown', function (event) {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') { // Problem 3 fixed: Replaced deprecated 'keyCode' with 'key'.
         event.preventDefault();
         document.getElementById('send-button').click();
     }
@@ -141,5 +167,4 @@ document.getElementById('chat-input').addEventListener('keydown', function (even
 
 chatContainer.addEventListener('scroll', () => {
     isScrolledToBottom = chatContainer.scrollTop + chatContainer.clientHeight === chatContainer.scrollHeight;
-
 });

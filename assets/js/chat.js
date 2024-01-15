@@ -93,8 +93,8 @@ document.getElementById('send-button').addEventListener('click', async (event) =
 
         const userMessage = document.createElement('div');
         userMessage.innerHTML = `
-    <div class="mb-4 flex flex-col items-end justify-end">
-        <div class="bg-blue-100 rounded px-4 py-2 max-w-xs">
+    <div class="mb-4 flex flex-col items-end justify-end rounded-lg">
+        <div class="bg-blue-100 rounded-lg px-4 py-2 max-w-xs">
             <p class="text-sm">${message}</p>
         </div>
         <p class="text-xs text-gray-500 mt-2">${new Date().toLocaleTimeString()}</p>

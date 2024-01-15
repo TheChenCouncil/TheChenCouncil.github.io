@@ -29,7 +29,7 @@ function stayConnected() {
             .then(() => {
                 alert('Thank you for your interest. We will get back to you soon.');
 
-                window.location.href = 'mailto:work.jerrywu@gmail.com?subject=Getting in touch about The Louw Institute'
+                window.location.href = 'mailto:thelouwinstitute@googlegroups.com?subject=Getting in touch about The Louw Institute'
 
                 document.getElementById('email').value = '';
                 document.getElementById('firstname').value = '';

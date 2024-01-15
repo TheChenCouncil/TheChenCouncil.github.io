@@ -18,7 +18,7 @@
     <div class="flex h-screen">
         <!-- Chat window -->
         <div class="flex-1 p-4">
-            <div class="flex justify-between items-center p-4 bg-white">
+            <div class="flex justify-between items-center p-4 bg-white rounded-lg">
                 <div class="flex items-center">
                     <button class="text-gray-400" onclick="window.history.back();">
                         <i class="fas fa-arrow-left"></i>
@@ -37,16 +37,16 @@
             </div>
             <div class="mt-4 overflow-y-auto px-8" style="max-height: 80vh;" id="chat-container">
                 <!-- Chat messages -->
-                <div class="mb-4 flex items-end">
-                    <div class="bg-gray-200 rounded px-4 py-2 max-w-xs">
+                <div class="mb-4 flex items-end rounded-lg">
+                    <div class="bg-gray-200 rounded-lg px-4 py-2 max-w-xs">
                         <p class="text-sm">Welcome! You can message LouwGPT to inquire about information regarding to the Louw Institute. Start by typing your message below.</p>
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-white">
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray">
                 <!-- Chat input -->
                 <div class="flex items-center">
-                    <input type="text" class="flex-1 border rounded px-4 py-2 text-sm" placeholder="Message LouwGPT here..." id="chat-input">
+                    <input type="text" class="flex-1 border rounded-lg px-4 py-2 text-sm" placeholder="Message LouwGPT here..." id="chat-input">
                     <button class="text-gray-400 ml-2" id="send-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" fill="#0C57D0" id="send-button-icon">
                             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>

@@ -1,5 +1,5 @@
 function contactUs() {
-    window.location.href = 'mailto:thelouwinstitute@googlegroups.com?subject=Getting in touch about The Louw Institute';
+    window.location.href = 'mailto:thelouwParty@googlegroups.com?subject=Getting in touch about The Louw Party';
 }
 
 function sendText() {

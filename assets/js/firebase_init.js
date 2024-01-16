@@ -1,8 +1,8 @@
 var firebaseConfig = {
     apiKey: "AIzaSyCc5IwNHDR8etfNhCiWTat9BJmwXY7v068",
-    authDomain: "thelouwinstitute.firebaseapp.com",
-    projectId: "thelouwinstitute",
-    storageBucket: "thelouwinstitute.appspot.com"
+    authDomain: "thelouwParty.firebaseapp.com",
+    projectId: "thelouwParty",
+    storageBucket: "thelouwParty.appspot.com"
 };
 
 // Initialize Firebase

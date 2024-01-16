@@ -1,6 +1,19 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: url('/assets/img/index/bg3.jpg'); */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
-.header-title {
-    font-family: 'Libre Baskerville', serif;
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.photo-citation {
+    color: grey;
+    font-size: 0.4em; /* Adjust this value to make the text smaller or larger */
+    padding-top: 5px;
 }

@@ -5,109 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Louw Party</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
     <link rel="stylesheet" href="/assets/css/index.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="assets/js/firebase_init.js"></script>
 </head>
 
-<body class="bg-gray-100">
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="/index.html">
-                <h1 class="text-3xl font-bold leading-tight text-gray-900 header-title uppercase">The Louw Party</h1>
-            </a>
-            <nav class="flex space-x-4">
-                <a href="/members.html" class="text-gray-500 hover:text-gray-900">Administration</a>
-                <a href="/vision.html" class="text-gray-500 hover:text-gray-900">Our Vision</a>
-                <a href="/record.html" class="text-gray-500 hover:text-gray-900">The Record</a>
-                <button class="text-gray-500 hover:text-gray-900 font-semibold">MENU</button>
-            </nav>
+<body class="bg-black text-white relative" id="body">
+    <!-- Navigation -->
+    <nav class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-8">
+        <div class="text-xs uppercase tracking-widest">
+            <a href="/index.html" class="text-gray-400 hover:text-white transition-colors duration-300">The Louw Party.</a>
         </div>
-    </header>
+        <div class="flex space-x-6">
+            <a href="/members.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300">Administration</a>
+            <a href="/vision.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300">Our Vision</a>
+            <a href="/record.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300">The Record</a>
+        </div>
+    </nav>
 
-    <main class="mt-8">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
-                <div class="px-4 py-5 sm:px-6 grid grid-cols-1 md:grid-cols-1 gap-4">
-                    <div>
-                        <h2 class="text-2xl leading-10 font-extrabold text-gray-900 header-title uppercase">Envisioning a brighter future.</h2>
-                        <p class="mt-1 max-w-2xl text-md text-gray-500">Together We Thrive: Building Inclusive Communities, Ensuring Accessible Healthcare, and Strengthening Our Voices for a Prosperous Canadian Future.</p>
+    <!-- Main -->
+    <div class="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-32">
+        <div class="lg:w-1/2">
+            <div class="text-xs font-bold mb-2">01</div>
+            <h1 class="text-6xl font-bold mb-6">Welcome to<br> The Louw Party.</h1>
+            <p class="mb-6">Together We Thrive: Building Inclusive Communities, Ensuring Accessible Healthcare, and Strengthening Our Voices for a Prosperous Canadian Future.</p>
+            <button id="join-link" onclick="window.location='/about.html'" class="bg-white text-black px-6 py-2 uppercase text-xs tracking-widest font-bold hover:bg-gray-200 transition-colors duration-300">View our missions</button>
+        </div>
+    </div>
 
-                        <!-- <iframe class="w-full h-full" style="padding-top: 50px;" src="https://docs.google.com/document/d/e/2PACX-1vQIb4czoeqXsJCsYhlM9R56Xe3Im6PNFzNbC3Eyg_pkHWZvU17I-qGWCKlW40rKhYyL_bA0cxdeqjd7/pub?embedded=true"></iframe> -->
+    <!-- Footer -->
+    <div class="footer absolute bottom-0 left-0 right-0 p-8">
+        <div class="flex justify-between items-center">
+            <!-- Social Links and Citation -->
+            <div class="flex flex-col">
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/thelouwinstitute" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
 
-                        <div class="grid grid-cols-4 gap-4" style="padding-top: 20px;">
-                            <a href="#">
-                                <div class="bg-white overflow-hidden shadow rounded-lg">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <img src="/assets/img/index/immigration.png" alt="Placeholder image representing immigration" class="mx-auto rounded-lg">
-                                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Immigration</h3>
-                                        <p class="text-sm text-gray-500">Cross-border movement of people. Learn more.</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="bg-white overflow-hidden shadow rounded-lg">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <img src="/assets/img/index/housing.png" alt="Placeholder image representing housing" class="mx-auto rounded-lg">
-                                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Housing</h3>
-                                        <p class="text-sm text-gray-500">Shelter and accommodations provision. Learn more.</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="bg-white overflow-hidden shadow rounded-lg">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <img src="/assets/img/index/healthcare.png" alt="Placeholder image representing healthcare" class="mx-auto rounded-lg">
-                                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Health Care</h3>
-                                        <p class="text-sm text-gray-500">Healthcare services. Learn more.</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="bg-white overflow-hidden shadow rounded-lg">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <img src="/assets/img/index/freedom_of_expression.png" alt="Placeholder image representing clean " class="mx-auto rounded-lg">
-                                            <h3 class="mt-2 text-sm font-semibold text-gray-900">Freedom of Expression</h3>
-                                            <p class="text-sm text-gray-500">Free speech right. Learn more.</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="bg-white overflow-hidden shadow rounded-lg">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <img src="/assets/img/index/public_finance.png" alt="Placeholder image representing child tax credit information" class="mx-auto rounded-lg">
-                                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Public Finance</h3>
-                                        <p class="text-sm text-gray-500">Government resource management. Learn more.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                <!-- Citation Text -->
+                <p class="photo-citation" id="photo-citation"></p>
+            </div>
+
+            <div class="flex items-center">
+                <div class="text-xs font-bold mr-8">02</div>
+                <div class="flex space-x-8">
+                    <div class="text-center">
+                        <h2 class="text-xs uppercase tracking-widest mb-1">About us</h2>
+                        <button onclick="window.location='/about.html'" class="bg-transparent border border-white px-4 py-1 uppercase text-xs tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">Learn more</button>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8" style="margin-bottom: 40px;">
-                <div class="bg-blue-800 p-8 text-white rounded-lg">
-                    <h2 class="text-3xl font-bold leading-9 header-title">We Want to Hear From You</h2>
-                    <p class="mt-3 max-w-md text-sm">Send a text message to President Louw, or contact the Louw
-                        Party.</p>
-                    <p class="mt-3 text-xs">Message and data rates may apply. Reply HELP for help or STOP to cancel.</p>
-                    <div class="mt-6">
-                        <button onclick="sendText()" class="bg-white text-blue-800 font-semibold py-2 px-4 border border-blue-800 rounded shadow">Send Text</button>
-                        <button onclick="contactUs()" class="text-white font-semibold py-2 px-4 border border-transparent rounded shadow ml-4">Let's Talk</button>
-                    </div>
-                </div>
-                <div class="bg-blue-900 p-8 text-white rounded-lg">
-                    <h2 class="text-3xl font-bold leading-9 header-title">Get Involved</h2>
-                    <ul class="mt-3">
-                        <a href="#" style="text-decoration: underline;"><li class="mt-2 text-sm">Write or call the Louw Party</li></a>
-                        <a href="#" style="text-decoration: underline;"><li class="mt-2 text-sm">Join the Louw-Elguezabal Administration</li></a>
-                        <a href="#" style="text-decoration: underline;"><li class="mt-2 text-sm">Apply to be a Louw Party Fellow</li></a>
-                        <a href="#" style="text-decoration: underline;"><li class="mt-2 text-sm">Internship Opportunities at the Louw Party</li></a>
-                    </ul>
-                </div>
+            <div class="flex items-center">
+                <button onclick="switchBg()" class="bg-transparent border border-white px-4 py-1 uppercase text-xs tracking-widest font-bold flex items-center hover:bg-white hover:text-black transition-colors duration-300">
+                    <i class="fas fa-forward mr-2"></i>
+                    Switch
+                </button>
             </div>
         </div>
-    </main>
+    </div>
 </body>
 <script src="/assets/js/index.js"></script>
 

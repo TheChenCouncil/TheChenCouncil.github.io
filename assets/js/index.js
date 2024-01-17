@@ -36,4 +36,11 @@ function switchBg(bg) {
 
 document.addEventListener('DOMContentLoaded', function () {
     switchBg('bg.jpg')
+
+    var isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
+    if (isMobile) {
+        
+    } else {
+        console.log("This is not a mobile device");
+    }
 });

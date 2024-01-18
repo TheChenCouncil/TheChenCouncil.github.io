@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isMobile) {
         
     } else {
-        console.log("This is not a mobile device");
+        
     }
 });

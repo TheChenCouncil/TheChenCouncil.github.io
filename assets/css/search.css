@@ -1,0 +1,9 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+.footer-links a {
+    color: #6B7280; /* Tailwind gray-500 */
+}
+.footer-links a:hover {
+    color: #111827; /* Tailwind gray-900 */
+}

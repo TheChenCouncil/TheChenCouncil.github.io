@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Louw Party</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+    <link rel="stylesheet" href="/assets/css/index.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="assets/js/firebase_init.js"></script>
+</head>
+
+<body class="bg-black text-white relative" id="body">
+    <!-- Navigation -->
+    <nav class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-8">
+        <div class="text-xs uppercase tracking-widest">
+            <a href="/index.html" class="text-gray-400 hover:text-white transition-colors duration-300">The Louw Party.</a>
+        </div>
+        <div class="flex space-x-6">
+            <a href="/members.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300 navbar-links">Members</a>
+            <a href="/vision.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300 navbar-links">Our Vision</a>
+            <a href="/record.html" class="text-xs uppercase tracking-widest hover:text-gray-300 transition-colors duration-300 navbar-links">The Record</a>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-32">
+        <div class="lg:w-1/2">
+            <div class="text-xs font-bold mb-2">01</div>
+            <h1 class="text-6xl font-bold mb-6" id="title">Welcome to<br> The Louw Party.</h1>
+            <p class="mb-6">Together We Thrive: Building Inclusive Communities, Ensuring Accessible Healthcare, and Strengthening Our Voices for a Prosperous Canadian Future.</p>
+            <button id="join-link" onclick="window.location='/about.html'" class="bg-white text-black px-6 py-2 uppercase text-xs tracking-widest font-bold hover:bg-gray-200 transition-colors duration-300">View our missions</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer absolute bottom-0 left-0 right-0 p-8">
+        <div class="flex justify-between items-center">
+            <!-- Social Links and Citation -->
+            <div class="flex flex-col">
+                <div class="flex space-x-4">
+                    <a href="https://instagram.com/thelouwinstitute" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- Citation Text -->
+                <p class="photo-citation" id="photo-citation"></p>
+            </div>
+
+            <div class="flex items-center">
+                <div class="text-xs font-bold mr-8">02</div>
+                <div class="flex space-x-8">
+                    <div class="text-center">
+                        <h2 class="text-xs uppercase tracking-widest mb-1" style="font-size: 12px;">About us</h2>
+                        <button onclick="window.location='/about.html'" class="bg-transparent border border-white px-4 py-1 uppercase text-xs tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300" style="font-size: 10px; white-space: nowrap;">Learn more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center" id="switch-btn">
+                <button onclick="switchBg()" class="bg-transparent border border-white px-4 py-1 uppercase text-xs tracking-widest font-bold flex items-center hover:bg-white hover:text-black transition-colors duration-300" style="font-size: 10px;">
+                    <i class="fas fa-forward mr-2"></i>
+                    Switch
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/index.js"></script>
+
+</html>

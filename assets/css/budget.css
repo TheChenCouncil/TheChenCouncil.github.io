@@ -1,0 +1,11 @@
+#budget-tables #budget-table {
+    margin-bottom: 80px;
+}
+
+#budget-table > * {
+    margin: 20px 0;
+}
+
+#budget-tables #budget-table:last-child {
+    margin-bottom: 50px;
+}

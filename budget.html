@@ -1,0 +1,747 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget - The Louw Party</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/budget.css">
+    </link>
+</head>
+
+<body>
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <img src="/assets/img/logo_black.png" width="40" height="40" style="border-radius: 10px;">
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="/index.html" class="text-sm font-semibold leading-6 text-gray-900">Home <span
+                            aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div
+                        class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Announcing President Dickson's Speech <a href="/events/president_speech.html"
+                            class="font-semibold text-indigo-600">
+                            <span class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                                aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Read The Louw Party's Budget
+                        Plan</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">We focus on ensuring responsible and efficient
+                        allocation of public funds. We prioritize investments in key areas such as education, privatized
+                        healthcare, and infrastructure.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a onclick="smoothScrollAboveElement('budget-tables', 50)"
+                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Read
+                            more</a>
+                        <a href="/vision.html" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="budget-tables" class="select-none">
+        <div x-data="{ tableItems: [
+            {
+                Name: 'The Office',
+                Month1: '$1900',
+                Month2: '$1715',
+                Month3: '$1925',
+                Month4: '$1340',
+                Month5: '$1240',
+                Month6: '$1560',
+                Total: '$9680'
+            },
+            {
+                Name: 'Rent and utilities',
+                Month1: '$1000',
+                Month2: '$1000',
+                Month3: '$1000',
+                Month4: '$1000',
+                Month5: '$1000',
+                Month6: '$1000',
+                Total: '$6000'
+            },
+            {
+                Name: 'Phones',
+                Month1: '$30',
+                Month2: '$30',
+                Month3: '$30',
+                Month4: '$30',
+                Month5: '$30',
+                Month6: '$30',
+                Total: '$180'
+            },
+            {
+                Name: 'Phone cards',
+                Month1: '$10',
+                Month2: '$10',
+                Month3: '$10',
+                Month4: '$10',
+                Month5: '$10',
+                Month6: '$10',
+                Total: '$60'
+            },
+            {
+                Name: 'Supplies (Pens, paper, etc.)',
+                Month1: '$50',
+                Month2: '$50',
+                Month3: '$50',
+                Month4: '$50',
+                Month5: '$50',
+                Month6: '$50',
+                Total: '$300'
+            },
+            {
+                Name: 'Computers',
+                Month1: '$300',
+                Month2: '$300',
+                Month3: '$600',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$1200'
+            },
+            {
+                Name: 'Printers',
+                Month1: '$100',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$100'
+            },
+            {
+                Name: 'Toners',
+                Month1: '$100',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$100'
+            },
+            {
+                Name: 'Internet',
+                Month1: '$50',
+                Month2: '$50',
+                Month3: '$50',
+                Month4: '$50',
+                Month5: '$50',
+                Month6: '$50',
+                Total: '$300'
+            },
+            {
+                Name: 'Drinks',
+                Month1: '$30',
+                Month2: '$30',
+                Month3: '$30',
+                Month4: '$30',
+                Month5: '$30',
+                Month6: '$30',
+                Total: '$2200'
+            },
+            {
+                Name: 'Postage',
+                Month1: '$30',
+                Month2: '$45',
+                Month3: '$55',
+                Month4: '$60',
+                Month5: '$60',
+                Month6: '$70',
+                Total: '$320'
+            },
+            {
+                Name: 'Volunteer expenses',
+                Month1: '$200',
+                Month2: '$200',
+                Month3: '$100',
+                Month4: '$100',
+                Month5: '$0',
+                Month6: '$300',
+                Total: '$900'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Office</h3>
+                    <p class="text-gray-600 mt-2">Phone, supplies, furnitures, postage, etc.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Name"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div x-data="{ tableItems: [
+            {
+                Name: 'Printing/Photocopying',
+                Month1: '$85',
+                Month2: '$80',
+                Month3: '$130',
+                Month4: '$175',
+                Month5: '$225',
+                Month6: '$275',
+                Total: '$2020'
+            },
+            {
+                Name: 'Flyers',
+                Month1: '$10',
+                Month2: '$10',
+                Month3: '$20',
+                Month4: '$15',
+                Month5: '$15',
+                Month6: '$40',
+                Total: '$110'
+            },
+            {
+                Name: 'Paraphernalia (buttons, stickers, signs)',
+                Month1: '$40',
+                Month2: '$40',
+                Month3: '$60',
+                Month4: '$90',
+                Month5: '$120',
+                Month6: '$140',
+                Total: '$490'
+            },
+            {
+                Name: 'Invitations',
+                Month1: '$25',
+                Month2: '$20',
+                Month3: '$40',
+                Month4: '$50',
+                Month5: '$50',
+                Month6: '$55',
+                Total: '$240'
+            },
+            {
+                Name: 'Photocopies',
+                Month1: '$10',
+                Month2: '$10',
+                Month3: '$10',
+                Month4: '$20',
+                Month5: '$40',
+                Month6: '$40',
+                Total: '$1180'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Printing/Photocopying</h3>
+                    <p class="text-gray-600 mt-2">Flyers, invitations, promotion, etc.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Name"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div x-data="{ tableItems: [
+            {
+                Name: 'Fundraising',
+                Month1: '$50',
+                Month2: '$200',
+                Month3: '$50',
+                Month4: '$250',
+                Month5: '$100',
+                Month6: '$400',
+                Total: '$1050'
+            },
+            {
+                Name: 'Events',
+                Month1: '$0',
+                Month2: '$150',
+                Month3: '$0',
+                Month4: '$150',
+                Month5: '$0',
+                Month6: '$300',
+                Total: '$600'
+            },
+            {
+                Name: 'Meetings',
+                Month1: '$50',
+                Month2: '$50',
+                Month3: '$50',
+                Month4: '$100',
+                Month5: '$100',
+                Month6: '$100',
+                Total: '$450'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Fundraising</h3>
+                    <p class="text-gray-600 mt-2">Events & meetings.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Name"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div x-data="{ tableItems: [
+            {
+                Name: 'Voter Contact',
+                Month1: '$160',
+                Month2: '$60',
+                Month3: '$170',
+                Month4: '$70',
+                Month5: '$220',
+                Month6: '$230',
+                Total: '$910'
+            },
+            {
+                Name: 'Voter list',
+                Month1: '$10',
+                Month2: '$10',
+                Month3: '$20',
+                Month4: '$20',
+                Month5: '$20',
+                Month6: '$30',
+                Total: '$110'
+            },
+            {
+                Name: 'Door to door',
+                Month1: '$0',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$0'
+            },
+            {
+                Name: 'Community meetings',
+                Month1: '$100',
+                Month2: '$0',
+                Month3: '$100',
+                Month4: '$0',
+                Month5: '$100',
+                Month6: '$100',
+                Total: '$400'
+            },
+            {
+                Name: 'Get out the vote',
+                Month1: '$50',
+                Month2: '$50',
+                Month3: '$50',
+                Month4: '$50',
+                Month5: '$100',
+                Month6: '$100',
+                Total: '$400'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Voter Contact</h3>
+                    <p class="text-gray-600 mt-2">Voter list, Door to door, and community meetings.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Name"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div x-data="{ tableItems: [
+            {
+                Name: 'Media and Communication',
+                Month1: '$202',
+                Month2: '$2',
+                Month3: '$102',
+                Month4: '$2',
+                Month5: '$2',
+                Month6: '$502',
+                Total: '$812'
+            },
+            {
+                Name: 'Radio ads',
+                Month1: '$100',
+                Month2: '$0',
+                Month3: '$100',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$100',
+                Total: '$300'
+            },
+            {
+                Name: 'Billboards',
+                Month1: '$0',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$0'
+            },
+            {
+                Name: 'Newspaper ads',
+                Month1: '$100',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$100',
+                Total: '$200'
+            },
+            {
+                Name: 'Website',
+                Month1: '$2',
+                Month2: '$2',
+                Month3: '$2',
+                Month4: '$2',
+                Month5: '$2',
+                Month6: '$2',
+                Total: '$12'
+            },
+            {
+                Name: 'Press events',
+                Month1: '$0',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$300',
+                Total: '$300'
+            },
+            {
+                Name: 'Social Media',
+                Month1: '$0',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$0'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Media and Communication</h3>
+                    <p class="text-gray-600 mt-2">Radio, billboards, newspaper, etc.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Name"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div x-data="{ tableItems: [
+            {
+                Name: 'Revenue-Income In',
+                Month1: '$2109.38',
+                Month2: '$2109.38',
+                Month3: '$2109.38',
+                Month4: '$2109.38',
+                Month5: '$2320.32',
+                Month6: '$2323.32',
+                Total: '$13,503'
+            },
+            {
+                Name: 'Candidate contributions',
+                Month1: '$210.94',
+                Month2: '$210.94',
+                Month3: '$210.94',
+                Month4: '$210.94',
+                Month5: '$316.41',
+                Month6: '$316.41',
+                Total: '$1,688'
+            },
+            {
+                Name: 'Political Party contributions',
+                Month1: '$210.94',
+                Month2: '$210.94',
+                Month3: '$210.94',
+                Month4: '$210.94',
+                Month5: '$316.41',
+                Month6: '$316.41',
+                Total: '$1,688'
+            },
+            {
+                Name: 'Donations',
+                Month1: '$1687.5',
+                Month2: '$0',
+                Month3: '$1687.5',
+                Month4: '$0',
+                Month5: '$1687.5',
+                Month6: '$0',
+                Total: '$5,063'
+            },
+            {
+                Name: 'Fundraising events',
+                Month1: '$0',
+                Month2: '$1687.5',
+                Month3: '$0',
+                Month4: '$1687.5',
+                Month5: '$0',
+                Month6: '$1690.5',
+                Total: '$5065.5'
+            },
+            {
+                Name: 'Total Expenses',
+                Month1: '$2397',
+                Month2: '$2057',
+                Month3: '$2377',
+                Month4: '$1837',
+                Month5: '$1787',
+                Month6: '$2967',
+                Total: '$13,422'
+            },
+            {
+                Name: 'Total Income',
+                Month1: '$2109.38',
+                Month2: '$2109.38',
+                Month3: '$2109.38',
+                Month4: '$2109.38',
+                Month5: '$2320.32',
+                Month6: '$2323.32',
+                Total: '$13,503'
+            },
+            {
+                Name: 'Cash-On-Hand',
+                Month1: '$0',
+                Month2: '$0',
+                Month3: '$0',
+                Month4: '$0',
+                Month5: '$0',
+                Month6: '$0',
+                Total: '$78'
+            }
+        ] }" class="max-w-screen-xl mx-auto px-4 md:px-6" id="budget-table">
+
+            <div class="items-start justify-between md:flex">
+                <div class="max-w-lg">
+                    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Results</h3>
+                    <p class="text-gray-600 mt-2">Calculated annual results.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative h-max overflow-auto">
+                <table class="w-full table-auto text-sm text-left">
+                    <thead class="text-gray-600 font-medium border-b">
+                        <tr>
+                            <th class="py-3 pr-6">Name</th>
+                            <th class="py-3 pr-6">Month #1</th>
+                            <th class="py-3 pr-6">Month #2</th>
+                            <th class="py-3 pr-6">Month #3</th>
+                            <th class="py-3 pr-6">Month #4</th>
+                            <th class="py-3 pr-6">Month #5</th>
+                            <th class="py-3 pr-6">Month #6</th>
+                            <th class="py-3 pr-6">Total</th>
+                            <th class="py-3 pr-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 divide-y">
+                        <template x-for="(item, idx) in tableItems" :key="idx">
+                            <tr>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" x-text="item.Name"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month1"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month2"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month3"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month4"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month5"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap" x-text="item.Month6"></td>
+                                <td :class="{'font-bold': ['Total Expenses', 'Total Income', 'Cash-On-Hand', 'Revenue-Income In'].includes(item.Name)}" class="pr-6 py-4 whitespace-nowrap">
+                                    <span :class="`px-3 py-2 rounded-full font-semibold text-xs ${item.Total === 'Active' ? 'text-green-600 bg-green-50' : 'text-blue-600 bg-blue-50'}`"
+                                        x-text="item.Total"></span>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="/assets/js/budget.js"></script>
+</html>

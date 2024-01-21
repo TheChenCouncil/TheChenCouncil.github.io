@@ -1,7 +1,7 @@
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-function stayConnected() {
+function getInvolved() {
     const email = document.getElementById('email').value;
     const firstname = document.getElementById('firstname').value;
 
@@ -28,8 +28,6 @@ function stayConnected() {
         })
             .then(() => {
                 alert('Thank you for your interest. We will get back to you soon.');
-
-                window.location.href = 'mailto:thelouwParty@googlegroups.com?subject=Getting in touch about The Louw Party'
 
                 document.getElementById('email').value = '';
                 document.getElementById('firstname').value = '';

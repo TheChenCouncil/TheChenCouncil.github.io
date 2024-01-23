@@ -42,4 +42,8 @@ body {
     .navbar-links {
         font-size: 12px;
     }
+
+    #logoimg {
+        display: none;
+    }
 }

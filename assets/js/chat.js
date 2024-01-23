@@ -44,7 +44,7 @@ URL of the campaign's main pages:
 - http://campaign.iamjerryhu.info/vision.html (The vision of the campaign)
 - http://campaign.iamjerryhu.info/members/dr_fraser.html (The page of Dr. Fraser)
 - http://campaign.iamjerryhu.info/members/dr_hu.html (The page of Dr. Hu)
-- http://campaign.iamjerryhu.info/members/dr_matthew_dickson.html (The page of Dr. Dickson, the president)
+- http://campaign.iamjerryhu.info/members/dr_dylan_louw.html (The page of Dr. Dickson, the president)
 - http://campaign.iamjerryhu.info/members/dr_mcdaniel.html (The page of Dr. Mcdaniel)
 - http://campaign.iamjerryhu.info/members/dr_miranda.html (The page of Dr. Miranda)
 - http://campaign.iamjerryhu.info/members/prof_e.html (The page of Prof. E)
